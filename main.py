@@ -15,11 +15,11 @@ percentage = input("what percentage of tip would you like to give? ")
 
 split_bill = input("how many people to split the bill? ")
 
-shared_bill = float(bill) / int(split_bill)
+tip =  float(bill) / 100  * int(percentage) 
 
-tip =  int(percentage) / 100  * float(bill) 
+total_bill = float(bill) + tip
 
-payment = shared_bill + tip
+shared_bill = float(total_bill) / int(split_bill)
 
-final_payment = round(payment, 2)
+final_payment = round(shared_bill, 2)
 print(f"Each person should pay: ${final_payment} ")
